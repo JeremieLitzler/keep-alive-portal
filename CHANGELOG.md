@@ -1,3 +1,11 @@
+## 1.0.0 (2025-05-20)
+
+### Features
+
+* add a h1 with a title ([e3f8d13](https://github.com/JeremieLitzler/keep-alive-portal/commit/e3f8d13e843a49b63ec462676a5ff197b4f58cc8))
+* finalize initial app ([17cb58b](https://github.com/JeremieLitzler/keep-alive-portal/commit/17cb58b2ca5ab26cc758442cacf1a6e8858b0331))
+* update .releaserc ([fb15537](https://github.com/JeremieLitzler/keep-alive-portal/commit/fb15537b2240f674cfe0656148ed471f97ba3f56))
+
 ## [2.3.0](https://github.com/JeremieLitzler/VueSupabaseBoilerplate/compare/v2.2.0...v2.3.0) (2025-04-08)
 
 ### Features
