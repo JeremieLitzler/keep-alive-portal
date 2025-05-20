@@ -6,9 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  build: {
-    cssMinify: 'lightningcss', // New CSS minifier
-  },
+  build: {},
   plugins: [
     vue({
       template: {
