@@ -29,17 +29,20 @@ const projects = computed<Project[]>(() => {
 </script>
 
 <template>
-  <Suspense>
-    <template #default>
-      <main class="project-grid">
-        <ProjectStatus v-for="project in projects" :key="project.url" :project />
-      </main>
-    </template>
+  <main>
+    <h1>Keep Supabase Nano Project Alive</h1>
+    <Suspense>
+      <template #default>
+        <main class="project-grid">
+          <ProjectStatus v-for="project in projects" :key="project.url" :project />
+        </main>
+      </template>
 
-    <template #fallback>
-      <div class="loading-overlay">⏳ Loading all project statuses...</div>
-    </template>
-  </Suspense>
+      <template #fallback>
+        <div class="loading-overlay">⏳ Loading all project statuses...</div>
+      </template>
+    </Suspense>
+  </main>
 </template>
 <style>
 .project-grid {
