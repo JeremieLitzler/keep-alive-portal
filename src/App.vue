@@ -16,11 +16,19 @@ const envVariables = {
   KEYS: 'VITE_SUPABASE_KEYS',
   SEPERATOR: '|',
 }
-const projects = computed<Project[]>(() => {
-  const urls = import.meta.env[envVariables.URLS].split(envVariables.SEPERATOR)
-  const keys = import.meta.env[envVariables.KEYS].split(envVariables.SEPERATOR)
-  const values = urls.map((url: string, index: number) => {
-    return { url: url.trim(), key: keys[index]?.trim() || '' }
+const projects = computed<Project[] | string>(() => {
+  const keysStrEnv = import.meta.env[envVariables.KEYS]
+  const urlsStrEnv = import.meta.env[envVariables.URLS]
+  console.log('import.meta.env[envVariables.KEYS]', keysStrEnv)
+  console.log('import.meta.env[envVariables.URLS]', urlsStrEnv)
+
+  if (keysStrEnv === undefined || urlsStrEnv === undefined) {
+    return ' ⚠️⚠️⚠️ Environment variables undefined... Add a .env file using .env.prod starter file. ⚠️⚠️⚠️'
+  }
+  const urlsArr = urlsStrEnv.split(envVariables.SEPERATOR)
+  const keysArr = keysStrEnv.split(envVariables.SEPERATOR)
+  const values = urlsArr.map((url: string, index: number) => {
+    return { url: url.trim(), key: keysArr[index]?.trim() || '' }
   })
   console.log('projects', values)
 
@@ -34,7 +42,10 @@ const projects = computed<Project[]>(() => {
     <Suspense>
       <template #default>
         <main class="project-grid">
-          <ProjectStatus v-for="project in projects" :key="project.url" :project />
+          <div v-if="typeof projects === 'string'">
+            {{ projects }}
+          </div>
+          <ProjectStatus v-else v-for="project in projects" :key="project.url" :project />
         </main>
       </template>
 
