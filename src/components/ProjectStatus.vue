@@ -30,8 +30,8 @@ if (errorSupabase) {
 
 <template>
   <div class="project-status">
-    <p v-if="error">❌ Error: {{ error }}</p>
+    <p v-if="error">Status of project <{{ props.project.url }}>: ❌ Error - {{ error }}</p>
     <p v-else-if="status === null">⏳ Loading...</p>
-    <p v-else>Status of project <{{ props.project.url }}>: {{ status }}</p>
+    <p v-else>Status of project <{{ props.project.url }}>: ✅ {{ status }}</p>
   </div>
 </template>
