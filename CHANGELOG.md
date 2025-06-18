@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/JeremieLitzler/keep-alive-portal/compare/v1.0.0...v1.0.1) (2025-06-18)
+
+### Bug Fixes
+
+* manage .env missing ([42320b7](https://github.com/JeremieLitzler/keep-alive-portal/commit/42320b799671a074c23a697ca6f7299c88c7848c))
+
 ## 1.0.0 (2025-05-20)
 
 ### Features
