@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/JeremieLitzler/keep-alive-portal/compare/v1.0.1...v1.1.0) (2025-06-18)
+
+### Features
+
+* improve UX on error ([2d5b607](https://github.com/JeremieLitzler/keep-alive-portal/commit/2d5b6077a3fb7e129571016bb197e5196a795e91))
+
 ## [1.0.1](https://github.com/JeremieLitzler/keep-alive-portal/compare/v1.0.0...v1.0.1) (2025-06-18)
 
 ### Bug Fixes
